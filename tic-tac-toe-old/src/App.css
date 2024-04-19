@@ -1,0 +1,84 @@
+:root {
+  --main-color: #eee;
+  --square-height: 6.25rem;
+  --square-radius: 0.25rem;
+  --border-width: 2px;
+  --grid-gap: 0.5rem
+}
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#root{
+  background-color: #222;
+  height: 100vh;
+  width: 100vw;
+  color: var(--main-color);
+  font-family: 'consolas';
+  text-align: center;
+  font-size: 16px;
+}
+
+#main_container{
+  background-color: inherit;
+  height: 100%;
+  width: 100%;
+  padding-top: 5%;
+  display: flex;
+  flex-direction: column;
+ 
+  align-items: center;
+}
+
+#main_container button {
+  margin-top: 1rem;
+  color: var(--main-color);
+  background-color: inherit;
+  border-radius: var(--square-radius);
+  padding: 0.4rem 0.6rem;
+  border-color: var(--main-color);
+  border-width: var(--border-width);
+  font-weight: bold;
+  width: var(--square-height);
+}
+
+
+#board{
+  min-width: 5rem;
+  min-height: 5rem;
+  /* border: 1px solid var(--main-color); */
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, var(--square-height) [col-start]);
+  grid-template-rows: repeat(3, var(--square-height) [col-start]);
+  column-gap: var(--grid-gap);
+  row-gap: var(--grid-gap);
+}
+
+.square{
+  height: var(--square-height);
+  width: var(--square-height);
+  border-color: var(--main-color);
+  border-radius: var(--square-radius);
+  border-width: var(--border-width);  
+  border-style: solid;
+  font-family: monospace;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.square:hover{
+  cursor: pointer;
+}
+
+.square span{
+  font-size: var(--square-height);
+  line-height: var(--square-height);
+}

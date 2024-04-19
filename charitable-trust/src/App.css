@@ -1,0 +1,352 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-width: 0;
+}
+
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+:root{
+  --main-bg-primary: rgb(26, 26, 67);
+  --main-bg-secondary: rgb(101, 101, 148);
+  --main-bg-light: rgba(232, 232, 242, 0.856);
+}
+
+#root{
+  width: 100vw;
+  min-height: 100vh;
+  background-color: var(--main-bg-light);
+  color: var(--main-bg-primary);
+  font-size: 16px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-image: url('../public/pattern-randomized.svg');
+  background-color: #e8e8f2;
+  overflow-y: scroll;
+overflow-x: hidden;
+
+
+  & #Navbar{
+    width: 100%;
+    height: 10vh;
+    font-size: 1.5rem;
+    justify-content: space-around;
+    background: rgba(232, 232, 242, 0.7);
+
+    
+    /* background-color: rgba(232, 232, 242, 0.824); */
+    
+    & #title{
+      white-space: no-wrap;
+      min-width: 25%;
+      font-size: 2rem;
+      font-weight: bold;
+
+      & svg{
+        margin-right: 0.5rem;
+      }
+    }
+
+    & #links{
+      width: 30%;
+      justify-content: space-around;
+      border: 10px solid transparent;
+    }
+
+    & #links span:hover{
+      font-weight: bold;
+      border: none;
+      /* text-decoration: underline; */
+    }
+
+    & #donate{
+      min-width: 20%;
+      
+    }
+
+  }
+
+}
+
+
+#hero{
+    width: 100vw;
+    margin-top: 3rem;
+    justify-content: center;
+
+    #content{
+      min-width: 40%;
+      max-width: 50%;
+      height: 80vh;
+      padding: 5rem 4rem;
+
+      h1{
+        font-size: 3rem;
+        margin-bottom: 2rem;
+        
+        span{
+          color: var(--main-bg-secondary);
+        }
+
+        svg{
+          width: 2rem;
+          margin-left: 1rem;
+          color: var(--main-bg-primary);
+          background-position: 30%;
+        }
+      }
+      p{
+        margin-bottom: 3rem;
+        font-size: 1.25rem;
+      }
+    }
+
+    #image{
+      width: 40%;
+      height: 75vh;
+      overflow: hidden;
+      background-image: url('../public/images/hero.jpg');
+      background-size: cover;
+      background-position: 30%;
+      opacity: 0.8;
+      
+      img{
+        height: 100%;
+      }
+    }
+}
+
+
+#major{
+  width: 100vw;
+  margin-top: 10rem;
+  
+  #innerCard{
+    height: 100vh;
+    width: 80%;
+    border: 5px solid whitesmoke;
+    justify-content: space-around;
+    background-color: rgba(232, 232, 242, 0.5);
+
+    .card{
+      width: 40%;
+      height: 80%;
+      background-color: whitesmoke;
+
+      .child_card{
+        width: 90%;
+        height: 90%;
+        justify-content: space-between;
+
+        .image{
+          width: 100%;
+          height: 50%;
+          background-image: url('../public/images/edu.jpg');
+          background-size: cover;
+        }
+        
+        #food_image{
+          background-image: url('../public/images/food.jpg') !important;
+        }
+        .content{
+          width: 100%;
+          height: 30%;
+          justify-content: center;
+          align-items: start;
+          padding: 1rem 1rem;
+
+          h1{
+            margin-bottom: 1rem;
+          }
+        }
+        .donate{
+          width: 100%;
+          height: 10%;
+          background-color: var(--main-bg-light);
+          font-size: 1.25rem;
+          font-weight: bold;
+
+          svg{
+            margin-left: 0.5rem;
+            width: 1rem !important;
+            color: var(--main-bg-secondary);
+          }
+        }
+
+        
+
+      }
+    }
+
+  }
+}
+
+
+#whatwedo{
+  width: 100vw;
+  margin-top: 10rem;
+  
+  #innerCard{
+    min-height: 100vh;
+    width: 75%;
+    justify-content: space-around;
+    background-color: whitesmoke;
+
+    .card{
+      width: 90%;
+    }
+
+    #card1{
+      height: 20vh;
+      align-items: start;
+      justify-content: space-evenly;
+
+      div{
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
+    #card2{
+      height: 100vh;
+      display: grid;
+      grid-template-columns: repeat(3, 32%) !important;
+      row-gap: 1rem;
+      column-gap: 1rem;
+      padding: 2rem 0;
+
+      .small_card{
+        width: 100%;
+        height: 100%;
+        padding: 1rem 1rem;
+        border: 2px dotted var(--main-bg-primary);
+
+        .image{
+          min-height: 30%;
+          width: 100%;
+          font-size: 3rem;;
+          color: var(--main-bg-secondary)
+        }
+        .header{
+          min-height: 20%;
+          width: 100%;
+          align-items: start;
+        }
+        .text{
+          min-height: 30%;
+          width: 100%;
+          justify-content: space-around;
+        }
+      }
+    }
+
+  }
+}
+
+#contact{
+  width: 100vw;
+  margin-top: 10rem;
+  padding-bottom: 4rem;
+  
+  #inner_card{
+    background-color: rgba(232, 232, 242, 0.5);
+    background-color: rgba(255, 255, 255, 0.8 );
+    height: 80vh;
+    width: 75%;
+    justify-content: space-evenly;
+
+    .card{
+      width: 43%;
+      height: 80%;
+    }
+
+    & #message{
+      padding: 1rem 2rem;
+
+      & h1{
+        margin-top: 1rem;
+      }
+
+      & #someText{
+        margin-top: 1rem;
+      }
+
+      & #cards{
+        margin-top: 3rem;
+
+        & .card{
+          justify-content: space-between;
+          margin-top: 1rem;
+          
+
+          & .image{
+            width: 20%;
+            margin: auto;
+            text-align: right;
+          }
+
+          & .text {
+            width: 70%;
+          }
+        }
+
+        & #follow{
+          margin-top: 3rem;
+          width: 76%;
+
+          & #cards_follow{
+            justify-content: start;
+            margin-top: 1rem;
+            & .cards{
+              margin-right: 0.5rem;
+              font-size: 3rem;
+              color: var(--main-bg-primary);
+          }
+          }
+          
+        }
+
+      }
+    }
+
+    & #form{
+      background-color: var(--main-bg-light);
+      
+      & .section{
+        margin: 2rem 0;
+        justify-content: space-around;
+        & .s{
+          width: 40%;
+          align-items: self-start;
+
+          & label{
+            margin-bottom: 0.25rem;
+          }
+
+          & input{
+            width: 100%;
+            height: 1.5rem;
+            border: 2px solid rgba(232, 232, 242, 0.821);
+          }
+        }
+      }
+      
+      & #three .s{
+        width: 90% ;
+        
+        & textarea{
+          width: 100% ;
+          border: 2px solid rgba(232, 232, 242, 0.821);
+        }
+      }
+
+      #button-dark{
+        width: 90%;
+        margin: auto;
+      }
+    }
+  }
+}

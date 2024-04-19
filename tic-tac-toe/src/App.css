@@ -1,0 +1,89 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+:root{
+  --main-bg-color: #222;
+  --main-color: #eee;
+  --square-width: 6.5rem;
+  --square-gap: 0.4rem;
+  --square-radius: 0.1rem;
+  --border: 2px solid #eee
+}
+
+#root{
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--main-bg-color);
+  color: var(--main-color);
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1{
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+button{
+  color: var(--main-color);
+  background-color: var(--main-bg-color);
+  padding: 0.25rem 0.5rem;
+  border: var(--border);
+  width: var(--square-width);
+  border-radius: var(--square-radius);
+  margin-bottom: 1rem;
+}
+
+#container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#board{
+  display: grid;
+  grid-template-columns: repeat(3, var(--square-width));
+  grid-template-rows: repeat(3, var(--square-width));
+  column-gap: var(--square-gap);
+  row-gap: var(--square-gap);
+
+}
+
+.square{
+  height: var(--square-width);
+  width: var(--square-width);
+  border: var(--border);
+  border-radius: var(--square-radius);
+  font-size: var(--square-width);
+  line-height: var(--square-width);
+}
+
+#pieces{
+  font-size: 4rem;
+  margin-top: 1rem;
+  width: calc((1.5   * var(--square-width)) + 0 * var(--square-gap));
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  & span{
+    padding: 0rem 1.25rem;
+    border-bottom: 3px solid var(--main-color);
+    border-color: var(--main-bg-color);
+    border-radius: 0.5rem;
+    font-weight: 800;
+  }
+}
+
+.active{
+  border-color: var(--main-color) !important;
+  background-color: var(--main-color);
+    color: var(--main-bg-color);
+}
